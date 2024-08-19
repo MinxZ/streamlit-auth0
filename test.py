@@ -1,11 +1,14 @@
-from auth0_component import login_button
+import os
+
 import streamlit as st
 from dotenv import load_dotenv
-import os
+
+from auth0_component import login_button
+
 load_dotenv()
 
-clientId = os.environ['clientId']
-domain = os.environ['domain']
+clientId = os.environ['AUTH0_CLIENT_ID']
+domain = os.environ['AUTH0_DOMAIN']
 
 st.title('Welcome to Auth0-Streamlit')
 
